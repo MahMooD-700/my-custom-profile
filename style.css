@@ -7,30 +7,50 @@
     color: white;
 }
 /* constants  */
-.transparent{
-    background-color: transparent;
+.font30{font-size: 30px;}
+
+.transparent{background-color: transparent;}
+.shadow-white{
+    text-shadow: 0 0 7px rgb(255, 255, 255);
 }
 .name{
-    font-size: clamp(1.5em, 5vw, 3em);
-    padding: 0 0.5em;
+font-size: clamp(1.5em, 5vw, 3em);
+padding: 0 .5em;
+text-shadow: 0 0 10px rgb(255, 255, 255);
 }
-body{width: 90%;
-margin: 50px 0 0 0;}
+.less-white{
+    color: rgba(255, 255, 255, 0.579);
+}
+body{
+width: 90%;
+margin: 50px 0 0 0;
+}
+
 body:before{
 content: "";
 position: absolute;
 top: 0;
 left: 50%;
 height: 100vh;
-box-shadow: 0 0 100px 5px rgb(6, 113, 252);
+box-shadow: 0 0 100px 5px rgb(6, 207, 252);
 animation: bodycolor 25s ease-in-out infinite alternate;
-
 }
+
+body:after{
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+width: 100vw;
+box-shadow: 0 0 100px 5px rgb(6, 252, 76);
+animation: bodycolor2 25s ease-in-out infinite alternate;
+}
+
 @keyframes bodycolor {
     0%{
         top: 0;
         left: 0%;
-        box-shadow: 0 0 100px 6px rgb(6, 113, 252);
+        box-shadow: 0 0 100px 6px rgb(6, 207, 252);
     }
     100%{
         top: 10%;
@@ -38,49 +58,17 @@ animation: bodycolor 25s ease-in-out infinite alternate;
         box-shadow: 0 0 100px 1px rgb(6, 113, 252);
     }
 }
-
-/* header::before{
-    content: "";
-    width: 30em;
-    position: absolute;
-    top: 0;
-    right: 0;
-    box-shadow: 0 0 100px 20px rgb(3, 253, 253);
-    animation: colorchange1 5s ease-in-out infinite alternate;
-}
-@keyframes colorchange1 {
-    0%{box-shadow: 0 0 100px 20px rgb(3, 253, 253);}
-    100%{box-shadow: 0 0 200px 25px rgb(3, 253, 253);}
-}
-header::after{
-    content: "";
-    width: 30em;
-    position: absolute;
-    top: 0em;
-    left: 0em;
-    box-shadow: 0 0 100px 20px rgb(3, 253, 136);
-    /* animation: colorchange1 5s ease-in-out infinite alternate; }*/
-
-header{
-    margin: 10px 0;
-    overflow: visible;
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-
-}
-header .mint , .cyan{
-    width: 10em;
-    border-radius: 50%;
-    box-shadow: 0 0 200px 20px mediumspringgreen;
-    display: flex;
-    justify-content: space-between;
-
-}
-header .cyan{
-    /* width: 10em;
-    border-radius: 50%; */
-    box-shadow: 0 0 200px 20px rgb(0, 233, 250);
+@keyframes bodycolor2 {
+    0%{
+        top: 0;
+        left: 0%;
+        box-shadow: 0 0 100px 6px rgb(104, 246, 144);
+    }
+    100%{
+        top: 100%;
+        left: 0;
+        box-shadow: 0 0 100px 1px rgb(6, 252, 133);
+    }
 }
 
 .s1{
@@ -89,35 +77,33 @@ display: flex;
 align-items: center;
 justify-content: space-between;
 margin: 0px 0;
-
-
 }
 
 section div .personal {
-    width: 8em;
-    background-color: rgba(245, 245, 220, 0);
+    width: 9em;
+    background-color:transparent;
     border-radius: 50%;
-    border: double 10px rgba(255, 255, 255, 0.363);
+    border: double 10px rgba(255, 255, 255, 0.048);
     animation: colorchange 5s ease-in-out infinite alternate;
-    /* will-change: border-color ,postion; */
 }
-@keyframes colorchange {
-    0% { border-color: rgba(255, 255, 255, 0);}
-    100%   { border-color: rgba(255, 255, 255, 0.2); }
-}
+
 .bio , .skills, .contact{
-    color: aquamarine;
-    font-weight: 900;
-    font-size: 24px;
-    padding: 0 0 20px 0;
-    
+font-size: 24px;
+padding: 0 0 20px 0;
+text-shadow: 0 0 7px rgb(255, 255, 255);
+
 }
+
 ul {
-    list-style: none;
-    
+list-style: none;
 }
+
 li{
-    background-color: transparent;
+background-color: transparent;
+}
+
+.grid{
+margin: 100px auto;
 }
 
 .grid .grid-cells{
@@ -130,6 +116,7 @@ li{
     background-color: transparent;
     margin: 15px auto;
 }
+
 .grid .parent .drop{
     max-height: 0;
     opacity: 0;
@@ -138,23 +125,49 @@ li{
     transform: translateY(10px);
     transition: all 1s ease;
     z-index: 10;
-
 }
+
 .parent {
     cursor: pointer;
     font-weight: bold;
     width: fit-content;
 }
+
 .ico{
 width: 50px;
 }
-
-
 
 .parent.open .drop {
 max-height: 500px;   
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
-
 }
+
+footer{
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 100px  auto;
+    padding: 20px;
+    border: 1px solid rgba(128, 128, 128, 0.493);
+    border-radius:10px ;
+}
+
+.pro-name{
+    font-size: 20px;
+    margin: 0 0 10px 0;
+}
+
+.alig{text-align: center;}
+
+.ar-colored{
+    text-shadow: 0  0px 10px rgba(0, 255, 255, 0.253);
+    padding: 50px 0 0 0;
+}
+
+
+
+
