@@ -131,7 +131,6 @@ li{
     margin: 15px auto;
 }
 .grid .parent .drop{
-    min-width: 200px;
     max-height: 0;
     opacity: 0;
     visibility: hidden;
@@ -157,4 +156,5 @@ max-height: 500px;
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
+
 }
