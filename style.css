@@ -7,7 +7,7 @@
     color: white;
 }
 /* constants  */
-.font30{font-size: 30px;}
+.font20{font-size: 20px;}
 
 .transparent{background-color: transparent;}
 .shadow-white{
@@ -96,6 +96,7 @@ text-shadow: 0 0 7px rgb(255, 255, 255);
 
 ul {
 list-style: none;
+padding:5px auto;
 }
 
 li{
@@ -167,6 +168,7 @@ footer{
     text-shadow: 0  0px 10px rgba(0, 255, 255, 0.253);
     padding: 50px 0 0 0;
 }
+
 
 
 
