@@ -101,7 +101,7 @@ list-style: none;
 
 li{
 background-color: transparent;
-    padding:5px auto;
+    padding:10px auto;
 }
 
 .grid{
@@ -169,6 +169,7 @@ footer{
     text-shadow: 0  0px 10px rgba(0, 255, 255, 0.253);
     padding: 50px 0 0 0;
 }
+
 
 
 
